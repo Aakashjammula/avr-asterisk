@@ -23,7 +23,7 @@ docker run -d \
   -p 8088:8088 \
   -p 10000-20000:10000-20000/udp \
   -v /path/to/your/config:/etc/asterisk \
-  agentvoiceresponse/avr-asterisk:latest
+  aakashjammula/avr-asterisk:latest
 ```
 
 ### Using Docker Compose
@@ -33,7 +33,7 @@ version: '3.8'
 
 services:
   asterisk:
-    image: agentvoiceresponse/avr-asterisk:latest
+    image: aakashjammula/avr-asterisk:latest
     container_name: asterisk
     ports:
       - "5038:5038"  # Manager API
@@ -107,7 +107,7 @@ exten => 6001,n,Hangup()
 If you want to build the image locally:
 
 ```bash
-git clone https://github.com/your-repo/avr-asterisk.git
+git clone https://github.com/Aakashjammula/avr-asterisk.git
 cd avr-asterisk
-docker build -t agentvoiceresponse/avr-asterisk:latest .
+docker build -t aakashjammula/avr-asterisk:latest .
 ```
